@@ -53,12 +53,6 @@ export function RouteTable({ flightPlan }: RouteTableProps) {
               <TableCell className="font-medium">총 소요 시간</TableCell>
               <TableCell className="text-right">{flightPlan.totalTime}</TableCell>
             </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">비행 속도</TableCell>
-              <TableCell className="text-right">
-                {flightPlan.settings.speed} {flightPlan.settings.speedUnit}
-              </TableCell>
-            </TableRow>
           </TableBody>
         </Table>
       </div>
@@ -72,24 +66,31 @@ export function RouteTable({ flightPlan }: RouteTableProps) {
               <TableHead>거리</TableHead>
               <TableHead>방위각</TableHead>
               <TableHead className="text-right">소요시간</TableHead>
+              <TableHead className="text-right">누적시간</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
-            {flightPlan.segments.map((segment, index) => {
-              const timeInMinutes = (segment.distance / flightPlan.settings.speed) * 60;
-              return (
-                <TableRow key={index}>
-                  <TableCell className="font-medium">
-                    {segment.from.name} → {segment.to.name}
-                  </TableCell>
-                  <TableCell>
-                    {segment.distance.toFixed(1)} NM ({nmToKm(segment.distance).toFixed(1)} km)
-                  </TableCell>
-                  <TableCell>{formatBearing(segment.heading)}</TableCell>
-                  <TableCell className="text-right">{formatTime(timeInMinutes)}</TableCell>
-                </TableRow>
-              );
-            })}
+            {(() => {
+              let cumulativeMinutes = 0;
+              return flightPlan.segments.map((segment, index) => {
+                const timeInMinutes = (segment.distance / flightPlan.settings.speed) * 60;
+                cumulativeMinutes += timeInMinutes;
+                
+                return (
+                  <TableRow key={index}>
+                    <TableCell className="font-medium">
+                      {segment.from.name} → {segment.to.name}
+                    </TableCell>
+                    <TableCell>
+                      {segment.distance.toFixed(1)} NM ({nmToKm(segment.distance).toFixed(1)} km)
+                    </TableCell>
+                    <TableCell>{formatBearing(segment.heading)}</TableCell>
+                    <TableCell className="text-right">{formatTime(timeInMinutes)}</TableCell>
+                    <TableCell className="text-right">{formatTime(cumulativeMinutes)}</TableCell>
+                  </TableRow>
+                );
+              });
+            })()}
           </TableBody>
         </Table>
       </div>
