@@ -180,14 +180,14 @@ export default function WaypointsPage() {
   };
 
   return (
-    <div className="container mx-auto p-4 md:p-6">
+    <div className="container mx-auto p-4 md:p-6 min-h-screen flex flex-col pb-24">
       <AdBanner />
       <div className="flex items-center mb-4 md:mb-6">
         <BackButton />
         <h1 className="text-xl md:text-2xl font-bold">Flight Plan - Waypoints</h1>
       </div>
       
-      <Card className="p-4 md:p-6">
+      <Card className="p-4 md:p-6 flex-1 overflow-y-auto">
         <div className="space-y-4">
           <div className="grid grid-cols-1 gap-4">
             <div>
@@ -261,7 +261,7 @@ export default function WaypointsPage() {
           {waypoints.length > 0 && (
             <div className="mt-6 space-y-2">
               <h3 className="font-medium">Added Waypoints</h3>
-              <div className="space-y-2 max-h-[40vh] overflow-y-auto">
+              <div className="space-y-2 max-h-[40vh] overflow-y-auto border rounded-md p-2">
                 {waypoints.map((waypoint, index) => (
                   <div key={index} className="p-2 bg-gray-50 rounded-md">
                     <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-1">
@@ -281,7 +281,7 @@ export default function WaypointsPage() {
             </div>
           )}
           
-          <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-2 pt-4">
+          <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-2 pt-4 sticky bottom-0 bg-white">
             <Button 
               variant="outline" 
               className="flex items-center gap-2 order-2 md:order-1"
