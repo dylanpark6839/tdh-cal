@@ -9,7 +9,7 @@ import { Card } from "@/components/ui/card";
 import { BackButton } from '@/components/BackButton';
 import { AdBanner } from '@/components/AdBanner';
 import { saveAs } from 'file-saver';
-import { tokml } from '@maphubs/tokml';
+import tokml from '@maphubs/tokml';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import { FlightPlan } from '@/types/flight';
@@ -104,7 +104,7 @@ function RouteContent() {
         cumulativeMinutes += timeInMinutes;
 
         return [
-          `${segment.from.name} → ${segment.to.name}`,
+          `${segment.from.name} to ${segment.to.name}`,
           `${segment.distance.toFixed(1)} NM`,
           `${segment.heading.toFixed(0)}°`,
           formatTime(timeInMinutes),
@@ -138,23 +138,53 @@ function RouteContent() {
   };
 
   const handleExportKML = () => {
-    const geojson = {
-      type: 'FeatureCollection',
-      features: flightPlan.waypoints.map(wp => ({
+    if (!flightPlan || flightPlan.waypoints.length < 2) {
+      toast.error('경로 정보가 없습니다.');
+      return;
+    }
+
+    // Create features array for waypoints and route line
+    const features = [
+      // Route line as LineString
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'LineString',
+          coordinates: flightPlan.waypoints.map(wp => [wp.coordinates.lng, wp.coordinates.lat])
+        },
+        properties: {
+          name: 'Flight Route',
+          description: `Total Distance: ${flightPlan.totalDistance.toFixed(1)} NM\nTotal Time: ${flightPlan.totalTime}`
+        }
+      },
+      // Individual waypoints as Points
+      ...flightPlan.waypoints.map((wp, index) => ({
         type: 'Feature',
         geometry: {
           type: 'Point',
           coordinates: [wp.coordinates.lng, wp.coordinates.lat]
         },
         properties: {
-          name: wp.name
+          name: `${index + 1}. ${wp.name}`,
+          description: `Waypoint ${index + 1}`
         }
       }))
+    ];
+
+    const geojson = {
+      type: 'FeatureCollection',
+      features
     };
 
-    const kml = tokml(geojson);
-    const blob = new Blob([kml], { type: 'application/vnd.google-earth.kml+xml' });
-    saveAs(blob, 'flight-plan.kml');
+    try {
+      const kml = tokml(geojson);
+      const blob = new Blob([kml], { type: 'application/vnd.google-earth.kml+xml' });
+      saveAs(blob, 'flight-plan.kml');
+      toast.success('KML 파일이 생성되었습니다.');
+    } catch (error) {
+      console.error('KML export error:', error);
+      toast.error('KML 생성 중 오류가 발생했습니다.');
+    }
   };
 
   return (

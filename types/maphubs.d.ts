@@ -1,4 +1,3 @@
 declare module '@maphubs/tokml' {
-  function tokml(geojson: any): string;
-  export { tokml };
+  export default function tokml(geojson: any): string;
 } 

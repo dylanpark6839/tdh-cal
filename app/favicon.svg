@@ -1,0 +1,39 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- 파란색 배경 -->
+  <rect width="512" height="512" fill="#2563eb" rx="64" />
+  
+  <!-- 흰색 텍스트 -->
+  <text
+    x="256"
+    y="256"
+    font-family="Arial, sans-serif"
+    font-size="48"
+    font-weight="bold"
+    fill="white"
+    text-anchor="middle"
+    dominant-baseline="middle">
+    Flight
+  </text>
+  <text
+    x="256"
+    y="316"
+    font-family="Arial, sans-serif"
+    font-size="48"
+    font-weight="bold"
+    fill="white"
+    text-anchor="middle"
+    dominant-baseline="middle">
+    Planning
+  </text>
+  <text
+    x="256"
+    y="376"
+    font-family="Arial, sans-serif"
+    font-size="48"
+    font-weight="bold"
+    fill="white"
+    text-anchor="middle"
+    dominant-baseline="middle">
+    Tool
+  </text>
+</svg> 

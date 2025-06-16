@@ -6,19 +6,21 @@ import { FlightSettings } from '@/components/FlightSettings';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FlightPlan, FlightSettings as FlightSettingsType, RouteSegment, Waypoint } from '@/types/flight';
-import { bearing, distance } from '@turf/turf';
+import bearing from '@turf/bearing';
+import distance from '@turf/distance';
 import { useRouter } from 'next/navigation';
-import { MapPin, Route } from "lucide-react";
+import { MapPin, Route, AlertCircle, Cloud } from "lucide-react";
 import Link from "next/link";
 import { AdBanner } from '@/components/AdBanner';
+import { Navigation } from '@/components/Navigation';
 
 export default function HomePage() {
   const router = useRouter();
   const [flightPlan, setFlightPlan] = useState<FlightPlan>({
     waypoints: [],
     settings: {
-      speed: 0,
-      speedUnit: 'kt',
+    speed: 0,
+    speedUnit: 'kt',
       distanceUnit: 'NM'
     },
     totalDistance: 0,
@@ -111,35 +113,66 @@ export default function HomePage() {
   };
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto p-4 md:p-6 flex flex-col min-h-[calc(100vh-2rem)]">
       <AdBanner />
-      <h1 className="text-3xl font-bold text-center mb-8">Flight Planning Tool</h1>
+      <div className="flex-1 container mx-auto p-6">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+          Flight Planning Tool
+        </h1>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        <Link href="/waypoints">
-          <Card className="p-6 hover:bg-gray-50 transition-colors cursor-pointer">
-            <div className="flex flex-col items-center text-center space-y-4">
-              <MapPin className="w-12 h-12" />
-              <div>
-                <h2 className="text-xl font-semibold">Waypoint Input</h2>
-                <p className="text-gray-600">Enter waypoints, coordinates, and speed information</p>
+        <div className="grid grid-cols-1 gap-6 max-w-4xl mx-auto">
+          <Link href="/waypoints">
+            <div className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white/50 backdrop-blur-sm transition-all hover:border-blue-500 hover:shadow-lg shadow-md">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative p-8">
+                <div className="flex flex-col items-center text-center space-y-4">
+                  <div className="rounded-full bg-blue-50 p-3 group-hover:bg-blue-100 transition-colors shadow-inner">
+                    <MapPin className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <div>
+                    <h2 className="text-xl font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">TDH Calculator</h2>
+                    <p className="mt-2 text-gray-600">-Time, Distance, Heading-</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </Card>
-        </Link>
+          </Link>
 
-        <Link href="/route">
-          <Card className="p-6 hover:bg-gray-50 transition-colors cursor-pointer">
-            <div className="flex flex-col items-center text-center space-y-4">
-              <Route className="w-12 h-12" />
-              <div>
-                <h2 className="text-xl font-semibold">Route View</h2>
-                <p className="text-gray-600">View route on map and export flight plan</p>
+          <Link href="/weather">
+            <div className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white/50 backdrop-blur-sm transition-all hover:border-blue-500 hover:shadow-lg shadow-md cursor-pointer">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative p-8">
+                <div className="flex flex-col items-center text-center space-y-4">
+                  <div className="rounded-full bg-blue-50 p-3 group-hover:bg-blue-100 transition-colors shadow-inner">
+                    <Cloud className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <div>
+                    <h2 className="text-xl font-semibold text-blue-800 group-hover:text-blue-600 transition-colors">기상 확인</h2>
+                    <p className="mt-2 text-blue-600">-METAR/TAF Information-</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </Card>
-        </Link>
+          </Link>
+
+          <div className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white/50 backdrop-blur-sm transition-all hover:border-blue-500 hover:shadow-lg shadow-md">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="relative p-8">
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="rounded-full bg-blue-50 p-3 group-hover:bg-blue-100 transition-colors shadow-inner">
+                  <AlertCircle className="w-8 h-8 text-gray-400" />
+                </div>
+                <div>
+                  <h2 className="text-xl font-semibold text-gray-400">NOTAM 확인</h2>
+                  <p className="mt-2 text-gray-400">-Notice To Air Missions-</p>
+                  <p className="mt-2 text-sm text-gray-400">(서비스 준비중)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <Navigation />
     </div>
   );
 }

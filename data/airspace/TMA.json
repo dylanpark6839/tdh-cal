@@ -1,0 +1,978 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seoul TMA T-01",
+        "description": "서울 접근관제구역 T-01 (FL 185 / 1 000 ft AGL, Class B, D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [125.7981, 37.2694],
+            [125.8025, 37.0881],
+            [126.3661, 37.0939],
+            [126.5286, 37.1419],
+            [126.6103, 37.1486],
+            [126.8061, 37.3403],
+            [126.9644, 37.3528],
+            [127.1478, 37.3028],
+            [127.3144, 37.3028],
+            [127.3978, 37.2528],
+            [127.6644, 37.2719],
+            [127.6644, 37.9694],
+            [126.8811, 37.6361],
+            [126.6811, 37.7194],
+            [126.1647, 37.6528],
+            [125.5481, 37.3528],
+            [125.7981, 37.2694]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seoul TMA T-02",
+        "description": "서울 접근관제구역 T-02 (FL 185 / FL 175, Class D)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [127.6644, 37.1111],
+            [127.7644, 37.1694],
+            [127.9144, 37.1694],
+            [127.9144, 38.0028],
+            [127.6644, 37.9694],
+            [127.6644, 37.1111]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seoul TMA T-03",
+        "description": "서울 접근관제구역 T-03 (FL 185 / 4 500 ft AMSL, Class B, D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [126.6103, 37.1486],
+            [126.7261, 37.1608],
+            [127.1144, 37.2528],
+            [127.3978, 37.2528],
+            [127.3144, 37.3028],
+            [127.1478, 37.3028],
+            [126.9644, 37.3528],
+            [126.8061, 37.3403],
+            [126.6103, 37.1486]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seoul TMA T-04",
+        "description": "서울 접근관제구역 T-04 (FL 185 / 6 500 ft AMSL, Class D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [125.8064, 36.9478],
+            [126.2811, 37.0139],
+            [126.4811, 36.9694],
+            [127.0297, 37.0919],
+            [126.9936, 37.2258],
+            [126.7261, 37.1608],
+            [126.5286, 37.1419],
+            [126.3661, 37.0939],
+            [125.8025, 37.0881],
+            [125.8064, 36.9478]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seoul TMA T-05",
+        "description": "서울 접근관제구역 T-05 (FL 185 / 7 500 ft AMSL, Class D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [127.0297, 37.0919],
+            [127.6644, 37.1775],
+            [127.6644, 37.2719],
+            [127.3978, 37.2528],
+            [127.1144, 37.2528],
+            [126.9936, 37.2258],
+            [127.0297, 37.0919]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seoul TMA T-06",
+        "description": "서울 접근관제구역 T-06 (FL 185 / 9 500 ft AMSL, Class D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [126.5844, 36.8794],
+            [127.6644, 37.0417],
+            [127.6644, 37.1775],
+            [127.0297, 37.0919],
+            [126.4811, 36.9694],
+            [126.5844, 36.8794]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seoul TMA T-07",
+        "description": "서울 접근관제구역 T-07 (FL 185 / 11 500 ft AMSL, Class D)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [126.7681, 36.7208],
+            [127.6644, 37.035],
+            [127.6644, 37.0417],
+            [126.5844, 36.8794],
+            [126.7681, 36.7208]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seoul TMA T-08",
+        "description": "서울 접근관제구역 T-08 (FL 185 / 11 500 ft AMSL, Class D)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [126.4658, 36.8611],
+            [126.5844, 36.8794],
+            [126.4811, 36.9694],
+            [126.4314, 36.975],
+            [126.4658, 36.8611]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seoul TMA T-09",
+        "description": "서울 접근관제구역 T-09 (FL 185 / FL 145, Class D)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [126.7681, 36.7208],
+            [126.5844, 36.8794],
+            [126.4658, 36.8611],
+            [126.4314, 36.975],
+            [126.2811, 37.0139],
+            [126.0436, 36.9808],
+            [126.7681, 36.7208]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seoul TMA S1",
+        "description": "인천공항 계기비행절차 보호구역 (6 000 ft AMSL / 1 600 ft AMSL, Class B, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [126.2461, 37.6744],
+            [126.2433, 37.66],
+            [126.5694, 37.7022],
+            [126.4925, 37.7267],
+            [126.2744, 37.6981],
+            [126.2461, 37.6744]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jungwon TMA T-18",
+        "description": "중원 접근관제구역 T-18 (FL 175 / 1 000 ft AGL, Class C, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [128.1644, 36.8361],
+            [128.6811, 36.9528],
+            [128.6811, 37.1194],
+            [128.6061, 37.5528],
+            [128.3311, 37.5194],
+            [128.0644, 37.2361],
+            [127.9144, 37.1694],
+            [127.8478, 37.1194],
+            [127.6644, 37.1111],
+            [128.1644, 36.8361]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jungwon TMA T-19",
+        "description": "중원 접근관제구역 T-19 (FL 145 / 1 000 ft AGL, Class D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [127.6644, 36.8361],
+            [127.0644, 36.3864],
+            [127.6144, 36.2031],
+            [127.8311, 36.1197],
+            [128.1644, 36.3864],
+            [128.1644, 36.4864],
+            [127.8478, 36.4864],
+            [127.9644, 36.7494],
+            [128.1644, 36.8361],
+            [127.6644, 37.1111],
+            [127.6644, 36.8361]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jungwon TMA T-20",
+        "description": "중원 접근관제구역 T-20 (FL 145 / 5 500 ft AMSL, Class D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [127.8478, 36.4864],
+            [128.1644, 36.4864],
+            [128.1644, 36.8361],
+            [127.9644, 36.7494],
+            [127.8478, 36.4864]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jungwon TMA T-17",
+        "description": "중원 접근관제구역 T-17 (6 500 ft AMSL / 1 000 ft AGL, Class D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [127.0811, 36.6694],
+            [127.0644, 36.3864],
+            [127.6644, 36.8361],
+            [127.6644, 37.0350],
+            [127.0811, 36.6694]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jungwon TMA T-21",
+        "description": "중원 접근관제구역 T-21 (3 500 ft AMSL / 1 000 ft AGL, Class C, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [127.8478, 37.1194],
+            [127.9144, 37.1694],
+            [127.7644, 37.1694],
+            [127.6644, 37.1111],
+            [127.8478, 37.1194]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jungwon TMA T-22",
+        "description": "중원 접근관제구역 T-22 (FL 175 / 9 500 ft AMSL, Class E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [128.2978, 36.7611],
+            [128.4644, 36.8028],
+            [128.6811, 36.9528],
+            [128.1644, 36.8361],
+            [128.2978, 36.7611]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gangneung TMA T-24",
+        "description": "강릉 접근관제구역 T-24 (FL 225 / 1 000 ft AGL, Class C, D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [128.5144, 38.0694],
+            [128.6811, 37.1194],
+            [129.8475, 37.1194],
+            [129.8475, 38.2028],
+            [128.5978, 38.2028],
+            [128.5311, 38.1361],
+            [128.5144, 38.0694]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gangneung TMA T-25",
+        "description": "강릉 접근관제구역 T-25 (FL 145 / 1 000 ft AGL, Class D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [128.5978, 38.2028],
+            [129.0, 38.2028],
+            [129.0, 38.3528],
+            [128.75, 38.3525],
+            [128.55, 38.2667],
+            [128.5978, 38.2028]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gimhae TMA T-26",
+        "description": "김해 접근관제구역 T-26 (FL 225 / 1 000 ft AGL, Class C, D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [128.4978, 34.5031],
+            [128.8644, 34.5031],
+            [129.8264839765587, 35.41991028416776],
+            [129.0894, 35.4197],
+            [129.0311, 35.5031],
+            [128.7739, 35.5033],
+            [128.5611, 35.4797],
+            [128.4978, 35.5031],
+            [128.4978, 34.5031]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gunsan TMA T-27",
+        "description": "군산 접근관제구역 T-27 (FL 225 / 1 000 ft AGL, Class C, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [126.5314, 36.3864],
+            [125.8147, 36.3861],
+            [125.8314, 35.5031],
+            [126.4981, 35.5031],
+            [126.6097, 35.9131],
+            [126.5314, 36.3864]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gunsan TMA T-28",
+        "description": "군산 접근관제구역 T-28 (FL 145 / 1 000 ft AGL, Class C, D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [126.6097, 35.9131],
+            [126.4981, 35.5031],
+            [126.8314, 35.5031],
+            [127.1644, 35.7531],
+            [127.6144, 35.7531],
+            [127.6144, 36.2031],
+            [127.0644, 36.3864],
+            [126.5314, 36.3864],
+            [126.6097, 35.9131]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gwangju TMA T-29",
+        "description": "광주 접근관제구역 T-29 (FL 225 / 1 000 ft AGL, Class C, D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [125.8314, 35.5031],
+            [126.8314, 35.5031],
+            [127.1644, 35.7531],
+            [127.6144, 35.7531],
+            [127.8311, 35.5031],
+            [126.9981, 34.2531],
+            [125.8314, 34.2531],
+            [125.8314, 35.5031]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gwangju TMA T-30",
+        "description": "광주 접근관제구역 T-30 (FL 225 / 13 500 ft AMSL, Class E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [127.6478, 35.2197],
+            [127.3144, 35.1528],
+            [127.3147, 34.7364],
+            [127.6478, 35.2197]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sacheon TMA T-31",
+        "description": "사천 접근관제구역 T-31 (FL 195 / 1 000 ft AGL, Class C, D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [126.9981, 34.2531],
+            [128.4978, 34.2533],
+            [128.4978, 35.5031],
+            [127.8311, 35.5031],
+            [126.9981, 34.2531]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sacheon TMA T-30",
+        "description": "사천 접근관제구역 T-30 (13 500 ft AMSL / 1 000 ft AGL, Class E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [127.3147, 34.7364],
+            [127.6478, 35.2197],
+            [127.3144, 35.1528],
+            [127.3147, 34.7364]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pohang TMA T-32",
+        "description": "포항 접근관제구역 T-32 (10 500 ft AMSL / 1 000 ft AGL, Class C, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [129.0833, 36.1],
+            [129.25, 36.0],
+            [129.8311, 35.8364],
+            [129.8478, 36.3364],
+            [128.6644, 36.3364],
+            [129.0833, 36.1]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pohang TMA T-33",
+        "description": "포항 접근관제구역 T-33 (10 500 ft AMSL / 1 000 ft AGL, Class C, D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [129.225, 35.65],
+            [129.1644, 35.4197],
+            [129.8311, 35.4197],
+            [129.8311, 35.8364],
+            [129.25, 36.0],
+            [129.225, 35.65]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pohang TMA T-34",
+        "description": "포항 접근관제구역 T-34 (7 500 ft AMSL / 1 000 ft AGL, Class C, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [129.0811, 35.9036],
+            [129.1667, 35.8167],
+            [129.2222, 35.65],
+            [129.25, 35.75],
+            [129.25, 36.0],
+            [129.0833, 36.1],
+            [129.0811, 35.9036]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pohang TMA T-42",
+        "description": "포항 접근관제구역 T-42 (9 500 ft AMSL / 1 000 ft AGL, Class C, D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [129.2678, 36.9419],
+            [129.4353, 36.5917],
+            [129.4353, 36.3364],
+            [129.8478, 36.3364],
+            [129.8475, 37.1194],
+            [129.2678, 37.1194],
+            [129.2678, 36.9419]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Daegu TMA T-35",
+        "description": "대구 접근관제구역 T-35 (FL 225 / 1 000 ft AGL, Class C, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [128.1644, 36.3864],
+            [127.8311, 36.1197],
+            [127.6144, 36.2031],
+            [127.6144, 35.7531],
+            [127.8311, 35.5031],
+            [128.4978, 35.5031],
+            [128.5611, 35.4797],
+            [128.7739, 35.5033],
+            [129.0311, 35.5031],
+            [129.0894, 35.4197],
+            [129.1644, 35.4197],
+            [129.2250, 35.6500],
+            [129.1667, 35.8167],
+            [129.0811, 35.9036],
+            [129.0833, 36.1000],
+            [128.6644, 36.3364],
+            [128.3978, 36.4864],
+            [128.1644, 36.4864],
+            [128.1644, 36.3864]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Yecheon TMA T-36",
+        "description": "예천 접근관제구역 T-36 (FL 225 / 1 000 ft AGL, Class C, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [128.4052, 37.0710],
+          [129.1604, 37.0710],
+          [129.1604, 36.5631],
+          [129.2607, 36.3530],
+          [129.2607, 36.2011],
+          [128.3952, 36.2011],
+          [128.2352, 36.2911],
+          [128.0952, 36.2911],
+          [128.0952, 36.5010],
+          [128.1752, 36.4540],
+          [128.2752, 36.4810],
+          [128.4052, 36.5710],
+          [128.4052, 37.0710]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Yecheon TMA T-42",
+        "description": "예천 접근관제구역 T-42 (FL 225 / 9 500 ft AMSL, Class E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [129.2678, 36.9419],
+            [129.4353, 36.5917],
+            [129.4353, 36.3364],
+            [129.8478, 36.3364],
+            [129.8475, 37.1194],
+            [129.2678, 37.1194],
+            [129.2678, 36.9419]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Yecheon TMA T-22",
+        "description": "예천 접근관제구역 T-22 (9 500 ft AMSL / 1 000 ft AGL, Class C, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [128.2978, 36.7611],
+            [128.4644, 36.8028],
+            [128.6811, 36.9528],
+            [128.1644, 36.8361],
+            [128.2978, 36.7611]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Yecheon TMA T-20",
+        "description": "예천 접근관제구역 T-20 (5 500 ft AMSL / 1 000 ft AGL, Class C, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [127.8478, 36.4864],
+            [128.1644, 36.4864],
+            [128.1644, 36.8361],
+            [127.9644, 36.7494],
+            [127.8478, 36.4864]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jeju TMA T-23",
+        "description": "제주 접근관제구역 T-23 (FL 165 / 1 000 ft AGL, Class B, D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [126.9981, 33.0033],
+            [127.3314, 33.27],
+            [127.3314, 34.2533],
+            [125.9981, 34.2531],
+            [125.9981, 33.0033],
+            [126.9981, 33.0033]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jeju TMA T-43",
+        "description": "제주 접근관제구역 T-43 (FL 165 / 6 000 ft AMSL, Class E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [125.9981, 33.0033],
+            [125.9981, 34.2531],
+            [125.8314, 34.2531],
+            [125.8314, 33.0033],
+            [125.9981, 33.0033]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Osan TMA T-13",
+        "description": "오산 접근관제구역 T-13 (9 500 ft AMSL / 4 500 ft AMSL, Class D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [126.4811, 36.9694],
+            [126.5950, 36.9953],
+            [126.6756, 36.8936],
+            [126.5844, 36.8794],
+            [126.4811, 36.9694]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Osan TMA T-14",
+        "description": "오산 접근관제구역 T-14 (11 500 ft AMSL / 4 500 ft AMSL, Class E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [126.5844, 36.8794],
+            [126.6756, 36.8936],
+            [126.7431, 36.7408],
+            [126.5844, 36.8794]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Osan TMA T-15",
+        "description": "오산 접근관제구역 T-15 (11 500 ft AMSL / 1 000 ft AGL, Class D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [126.7431, 36.7408],
+            [126.7681, 36.7208],
+            [127.6644, 37.035],
+            [127.6644, 37.0417],
+            [126.6731, 36.8936],
+            [126.7431, 36.7408]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Osan TMA T-16",
+        "description": "오산 접근관제구역 T-16 (FL 145 / 1 000 ft AGL, Class D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [126.7703, 36.7208],
+            [127.6644, 37.0361],
+            [127.0811, 36.6694],
+            [127.0644, 36.3864],
+            [126.8797, 36.3861],
+            [126.9211, 36.5828],
+            [126.8864, 36.6344],
+            [126.7703, 36.7208]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wonju TMA T-41",
+        "description": "원주 접근관제구역 T-41 (FL 175 / 1 000 ft AGL, Class C, D, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [127.9144, 38.0028],
+            [128.5144, 38.0694],
+            [128.6061, 37.5528],
+            [128.3311, 37.5194],
+            [128.0644, 37.2361],
+            [127.9144, 37.1694],
+            [127.9144, 38.0028]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Haemi TMA T-37",
+        "description": "해미 접근관제구역 T-37 (FL 145 / 1 000 ft AGL, Class C, E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [125.4823, 36.5652],
+          [126.1652, 37.0050],
+          [126.2553, 36.5850],
+          [126.2757, 36.5140],
+          [126.3504, 36.5246],
+          [126.4435, 36.4427],
+          [126.5311, 36.3804],
+          [126.5516, 36.3458],
+          [126.5247, 36.2310],
+          [125.4853, 36.2310],
+          [125.4823, 36.5652]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Daegu TMA T-33",
+        "description": "대구 접근관제구역 T-33 (FL 225 / 10 500 ft AMSL, Class E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [129.225, 35.65],
+            [129.1644, 35.4197],
+            [129.8311, 35.4197],
+            [129.8311, 35.8364],
+            [129.25, 36.0],
+            [129.225, 35.65]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Daegu TMA T-34",
+        "description": "대구 접근관제구역 T-34 (FL 225 / 7 500 ft AMSL, Class E)",
+        "source": "KML source"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [129.0811, 35.9036],
+            [129.1667, 35.8167],
+            [129.2222, 35.65],
+            [129.25, 35.75],
+            [129.25, 36.0],
+            [129.0833, 36.1],
+            [129.0811, 35.9036]
+          ]
+        ]
+      }
+    }
+  ]
+} 

@@ -8,6 +8,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { FlightPlan } from "@/types/flight";
+import { ChevronLeft, ChevronRight, MoveHorizontal } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 interface RouteTableProps {
   flightPlan: FlightPlan;
@@ -37,6 +39,25 @@ const nmToKm = (nm: number): number => {
 };
 
 export function RouteTable({ flightPlan }: RouteTableProps) {
+  const [showScrollHint, setShowScrollHint] = useState(true);
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowScrollHint(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleScroll = () => {
+    if (!hasScrolled) {
+      setHasScrolled(true);
+      setShowScrollHint(false);
+    }
+  };
+
   return (
     <div className="space-y-6">
       <div>
@@ -59,14 +80,31 @@ export function RouteTable({ flightPlan }: RouteTableProps) {
 
       <div>
         <h2 className="text-xl font-semibold mb-4">구간 정보</h2>
+        <div className="relative rounded-lg border border-gray-200">
+          {showScrollHint && (
+            <div className="absolute inset-0 z-20 pointer-events-none">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent animate-scroll-hint" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/90 rounded-lg shadow-lg px-4 py-2 flex items-center gap-2">
+                <MoveHorizontal className="h-5 w-5 text-blue-500 animate-bounce" />
+                <span className="text-sm text-gray-600 whitespace-nowrap">옆으로 스크롤하여 더 보기</span>
+              </div>
+            </div>
+          )}
+
+          <div 
+            ref={scrollContainerRef}
+            className="overflow-x-scroll scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400"
+            onScroll={handleScroll}
+          >
+            <div className="min-w-[800px] p-1">
         <Table>
           <TableHeader>
-            <TableRow>
-              <TableHead>구간</TableHead>
-              <TableHead>거리</TableHead>
-              <TableHead>방위각</TableHead>
-              <TableHead className="text-right">소요시간</TableHead>
-              <TableHead className="text-right">누적시간</TableHead>
+                  <TableRow className="bg-gray-50/80">
+                    <TableHead className="w-[200px] whitespace-nowrap font-semibold">구간</TableHead>
+                    <TableHead className="w-[200px] whitespace-nowrap font-semibold">거리</TableHead>
+                    <TableHead className="w-[150px] whitespace-nowrap font-semibold">방위각</TableHead>
+                    <TableHead className="w-[150px] text-right whitespace-nowrap font-semibold">소요시간</TableHead>
+                    <TableHead className="w-[150px] text-right whitespace-nowrap font-semibold">누적시간</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -77,22 +115,35 @@ export function RouteTable({ flightPlan }: RouteTableProps) {
                 cumulativeMinutes += timeInMinutes;
                 
                 return (
-                  <TableRow key={index}>
-                    <TableCell className="font-medium">
+                        <TableRow 
+                          key={index}
+                          className="hover:bg-gray-50/50 transition-colors"
+                        >
+                          <TableCell className="w-[200px] font-medium whitespace-nowrap">
                       {segment.from.name} → {segment.to.name}
                     </TableCell>
-                    <TableCell>
+                          <TableCell className="w-[200px] whitespace-nowrap">
                       {segment.distance.toFixed(1)} NM ({nmToKm(segment.distance).toFixed(1)} km)
                     </TableCell>
-                    <TableCell>{formatBearing(segment.heading)}</TableCell>
-                    <TableCell className="text-right">{formatTime(timeInMinutes)}</TableCell>
-                    <TableCell className="text-right">{formatTime(cumulativeMinutes)}</TableCell>
+                          <TableCell className="w-[150px] whitespace-nowrap">{formatBearing(segment.heading)}</TableCell>
+                          <TableCell className="w-[150px] text-right whitespace-nowrap">{formatTime(timeInMinutes)}</TableCell>
+                          <TableCell className="w-[150px] text-right whitespace-nowrap">{formatTime(cumulativeMinutes)}</TableCell>
                   </TableRow>
                 );
               });
             })()}
+                  {flightPlan.segments.length === 0 && (
+                    <TableRow>
+                      <TableCell colSpan={5} className="h-24 text-center text-gray-500">
+                        구간 정보가 없습니다
+                      </TableCell>
+                    </TableRow>
+                  )}
           </TableBody>
         </Table>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

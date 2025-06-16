@@ -2,9 +2,11 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from 'next/script';
-import { BottomNav } from "@/components/BottomNav";
-import { GestureNav } from "@/components/GestureNav";
 import { SplashScreen } from "@/components/SplashScreen";
+import { BottomNav } from "@/components/BottomNav";
+import { Toaster } from 'sonner';
+import { Navigation } from '@/components/Navigation';
+import { useState } from 'react';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,8 +28,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "비행 계획 도구",
-  description: "비행 계획을 수립하고 관리하는 도구",
+  title: 'TDH Cal',
+  description: 'TDH Cal',
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -37,16 +39,46 @@ export const metadata: Metadata = {
   other: {
     "apple-mobile-web-app-status-bar-style": "black-translucent",
   },
+  icons: {
+    icon: [
+      {
+        url: '/icons/icon.svg',
+        type: 'image/svg+xml',
+      }
+    ]
+  }
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="ko" className="h-full">
+    <html lang="en">
       <head>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-P0NT5BFQJ9"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-P0NT5BFQJ9');
+          `}
+        </Script>
+        
+        {/* Google AdSense */}
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          data-ad-client="ca-pub-1733830202388355"
+          strategy="lazyOnload"
+          crossOrigin="anonymous"
+        />
+        
         <link rel="manifest" href="/manifest.json" />
         <meta name="application-name" content="Flight Planning Tool" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -81,24 +113,15 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16x16.png" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        
-        <Script
-          src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
-          strategy="lazyOnload"
-          async
-          defer
-        />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full overflow-y-scroll pb-[calc(4rem+env(safe-area-inset-bottom))] md:pb-0 pt-[env(safe-area-inset-top)] bg-background`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased h-full bg-background`}>
         <SplashScreen />
-        <GestureNav>
-          <main className="min-h-[calc(100vh-4rem-env(safe-area-inset-bottom))] px-4 md:px-6 mx-auto max-w-7xl">
+        <div className="flex flex-col min-h-screen">
+          <main className="flex-1 px-4 md:px-6 mx-auto w-full max-w-7xl overflow-y-auto overflow-x-hidden pt-[env(safe-area-inset-top)] pb-[calc(4rem+env(safe-area-inset-bottom))]">
             {children}
           </main>
-        </GestureNav>
-        <BottomNav />
+        </div>
+        <Toaster />
       </body>
     </html>
   );
